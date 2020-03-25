@@ -102,7 +102,8 @@ def movies_with_directors_set(source)
     directors_movies = []
     movie_count = 0 
     while movie_count < source[director_count][:movies].length do
-      directors_movies << movie_with_director_name(source[director_count][:name], movie_data)
+      director_name = source[director_count][:name]
+      directors_movies << movie_with_director_name(director_name, movie_data)
     end
   end
   all_movies
